@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MasterInReact</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!-- <script>
+      //how we create element and add into the root in javasript
+      const text = document.createElement("h1");
+      text.innerHTML = "hello the java script";
+      const root = document.getElementById("root");
+      root.appendChild(text);
+    </script> -->
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script>
+      //how we create elements in react
+      const ReactElement = React.createElement(
+        "h2",
+        { className: "first" },
+        "this is React  element"
+      );
+      const ReactElement2 = React.createElement(
+        "p",
+        { className: "second" },
+        "this is second one"
+      );
+      const ReactElement3 = React.createElement("div", { className: "first" }, [
+        ReactElement,
+        ReactElement2,
+      ]);
+      const reactRoot = ReactDOM.createRoot(document.getElementById("root"));
+      reactRoot.render(ReactElement3);
+    </script>
+  </body>
+</html>
